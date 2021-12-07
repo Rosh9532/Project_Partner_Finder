@@ -1,0 +1,20 @@
+{
+  "name": "projectpartner",
+  "version": "1.0.0",
+  "description": "A project to find ur project partner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server.js"
+  },
+  "author": "Roshni",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.15",
+    "nodemon": "^2.0.15"
+  }
+}
