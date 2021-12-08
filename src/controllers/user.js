@@ -64,8 +64,17 @@ exports.login = async (req, res) => {
 };
 
 exports.profile = (req, res) => {
-  console.log(req.user);
-  res.status(200).json({
-    message: "U r authorized to visit this page.Hence ,u visited",
+  // console.log(req.user.id);
+  User.findOne({ _id: req.user.id }, (err, data) => {
+    if (!err && data) {
+      res.status(200).json({
+        message: "U r authorized to visit this page.Hence ,u visited",
+        user: data,
+      });
+    } else {
+      res.status(400).json({
+        message: "User not found",
+      });
+    }
   });
 };
